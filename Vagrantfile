@@ -26,10 +26,10 @@ end
 
 Vagrant.configure("2") do |config|
     config.vm.provider :virtualbox do |v|
-        v.name = "default"
+        v.name = "ddd2016_website"
         v.customize [
             "modifyvm", :id,
-            "--name", "default",
+            "--name", "ddd2016_website",
             "--memory", 1024,
             "--natdnshostresolver1", "on",
             "--cpus", 1,
