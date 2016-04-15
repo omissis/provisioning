@@ -10,6 +10,12 @@
 - name: Install php
   sudo: yes
   apt: pkg=php state=latest
+  notify: restart apache
+
+- name: Install mod php
+  sudo: yes
+  apt: pkg=libapache2-mod-php7.0 state=latest
+  notify: restart apache
 
 # - name: Install php-fpm
 #   sudo: yes
